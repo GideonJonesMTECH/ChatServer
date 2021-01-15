@@ -1,0 +1,15 @@
+{
+ "name": "TCP Chat Server",
+ "version": "1.0.0",
+ "description": "",
+ "main": "",
+ "scripts": {
+  "devStart": "nodemon server.js"
+ },
+ "author": "Gideon Jones",
+ "license": "ISC",
+ "dependencies": {},
+ "devDependencies": {
+  "nodemon": "^1.19.0"
+ }
+}
