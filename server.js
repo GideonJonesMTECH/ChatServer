@@ -1,8 +1,8 @@
 const net = require("net");
 
-const password = "kickEmOut";
 let sockets = [];
-var svrport = 1099;
+const svrport = process.argv[2];
+const password = process.argv[3];
 let server = net
   .createServer((socket) => {
     socket.userName = `User${socket.remotePort}`;
