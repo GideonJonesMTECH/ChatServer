@@ -9,7 +9,7 @@ Example: "node client 1099"
 Congrats, you've connected one client to the server! To add others, just open up another terminal and continue the steps to joining the first client.
 Now they'll be able to talk to each other!
 
-##Commands
+## Commands
 /w is whisper. You type in the username of another client and a message, and then you'll send only that user a message.
 Example: "/w User64405 Hey, I don't like the other user."
 
