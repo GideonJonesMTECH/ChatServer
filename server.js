@@ -63,18 +63,12 @@ let server = net.createServer((socket) => {
       }
 
       for (let i = 0; i < sockets.length; i++) {
-        if (sockets[i].userName == whisperTo) {
-          sockets[i].write(
-            `${socket.userName} whispered to you: "${message}".`
-          );
-          return;
-        } else {
-          socket.write(
-            `${whisperTo} doesn't exist, so you can't send a message to them.`
-          );
+        if (whisperTo == sockets[i].userName) {
+          sockets[i].write(`${socket.userName} whispered to you: "${message}"`);
           return;
         }
       }
+      socket.write(`Sorry, there isn't a user named "${whisperTo}"`);
     } else if (data[0] == "user") {
       let prevUsername = socket.userName;
       let newUsername = data[1];
